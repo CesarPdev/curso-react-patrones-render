@@ -10,7 +10,7 @@ function App() {
     <React.Fragment>
       <TodoHeader>
         <TodoCounter />
-        <TodoSearch />
+        <TodoSearch state={state}/>
       </TodoHeader>
       <TodoList>
         <TodoItem state={state} />
@@ -38,25 +38,25 @@ function TodoList ({ children }) {
 
 function TodoCounter () {
   return (
-    <p>Todo Counter</p>
+    <h2>Todo Counter</h2>
   );
 };
 
 function TodoSearch () {
   return (
-    <p>Todo Search</p>
-  );
-};
-
-function TodoCreateButton () {
-  return (
-    <button>Nuevo TODO</button>
+    <input placeholder='Todo Search'></input>
   );
 };
 
 function TodoItem ({ state }) {
   return (
     <p>Todo Item: {state}</p>
+  );
+};
+
+function TodoCreateButton () {
+  return (
+    <button>Nuevo TODO</button>
   );
 };
 
